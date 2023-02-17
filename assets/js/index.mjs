@@ -3,7 +3,7 @@ import fs from "fs/promises";
 
 
 // arrays of object that generate multiple question for user input
-let {title, description, installation, usage, contributing,license, test, username, email} = await inquirer
+let {title, description, installation, usage, contributing, license, link, test, username, email} = await inquirer
 .prompt([
     {
         type: 'input',
@@ -52,6 +52,12 @@ let {title, description, installation, usage, contributing,license, test, userna
         name: 'test',
         message: "Enter your test procedure?",
       },
+      {
+        type: 'input',
+        name: 'link',
+        message: "Enter your project link ?",
+      },
+      
       
 ])
 
@@ -78,7 +84,7 @@ function generateLicenese(license) {
 }
 
 let readMeText =`
-# Project Title
+#  ${title}
 
 # TABLE OF CONTENT
   - [DESCRIPTION](#Description)
@@ -94,17 +100,21 @@ let readMeText =`
   - [FEEDBACK](#Feedback)
 
 # Description
-A brief description of what this project does and who it's for
+${description}
 
 
 ## Built with
+ * HTML
+ * CSS
+ * JAVASCRIPT
+ * NODE.JS
+ 
 
-**Client:** React, Redux, TailwindCSS
 
-**Server:** Node, Express
 
 
 ## Installation
+${installation}
 
 Install my-project with npm
 
@@ -115,7 +125,7 @@ git clone https://github.com/your_username_/Project-Name.git
 "
     
 ## Run Locally
-
+${test}
 Clone the project
 
 "bash
@@ -142,7 +152,7 @@ bash
 
 
 ## Usage/Examples
-
+${usage}
 
 
 
@@ -156,19 +166,20 @@ Insert gif or link to demo
 Contributions are always welcome! as it  what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are 
 
 See  for ways to get started, If you have a suggestion that would make this better, please fork the repo and create a pull request
-
+ ${contributing}
 
 
 
 ## License
-
+${(generateLicenese(license))}
 [MIT](https://choosealicense.com/licenses/mit/)
 
 
 
 ## Questions
-Email :
-Project Link:
+Email : ${email}
+Profile : ${username}
+Project Link: ${link}
 
 
 `
