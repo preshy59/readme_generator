@@ -1,7 +1,9 @@
 import inquirer from 'inquirer';
 import fs from "fs/promises";
 
-const questions = await inquirer
+
+// arrays of object that generate multiple question for user input
+let {title, description, installation, usage, contributing,license, test, username, email} = await inquirer
 .prompt([
     {
         type: 'input',
@@ -16,23 +18,30 @@ const questions = await inquirer
      {
         type: 'input',
         name: 'installation',
-        message: "Enter your project description",
+        message: "what are the steps involved when installing the your project?",
       },
       {
         type: 'input',
         name: 'usage',
-        message: "Enter your project description",
+        message: "what are the usage information of your project?",
       },
-    {
-      type: 'input',
-      name: 'contributing',
-      message: "What's your last name",
-     
-    },
+    
+      {
+        type: 'input',
+        name: 'username',
+        message: "What's your GitHub userName?",
+       
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: "What's your email address?",
+       
+      },
     {
         type: 'list',
         name: 'license',
-        message: 'What license does the application covered?',
+        message: 'What license does your application covered?',
         choices: ['Apache 2.0 ', 'The MIT License', 'Open Database License (ODbL)'],
         filter(val) {
           return val.toLowerCase();
@@ -41,17 +50,13 @@ const questions = await inquirer
     {
         type: 'input',
         name: 'test',
-        message: "Enter your project description",
+        message: "Enter your test procedure?",
       },
-      {
-        type: 'input',
-        name: 'questions',
-        message: "Enter your GitHub user name description",
-      },
+      
 ])
 
 
-
+// function to display the badge of the license the user selected
 function generateLicenese(license) {
 
     if (license === "Apache 2.0" ) {
