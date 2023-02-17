@@ -76,3 +76,104 @@ function generateLicenese(license) {
     }
     
 }
+
+let readMeText =`
+# Project Title
+
+# TABLE OF CONTENT
+  - [DESCRIPTION](#Description)
+  - [BULIT WITH](#Built-with)
+  - [INSTALLATION](#Installation)
+  - [RUN](#Run-Locally)
+  - [USAGE](#Usage/Examples)
+  - [DEMONSTRATION](#Demo)
+  - [CONTRIBUTING](#Contributing)
+  - [LICENSE](#License)
+  - [SUPPORT](#Support)
+  - [CONTRIBUTING](#Contributing)
+  - [FEEDBACK](#Feedback)
+
+# Description
+A brief description of what this project does and who it's for
+
+
+## Built with
+
+**Client:** React, Redux, TailwindCSS
+
+**Server:** Node, Express
+
+
+## Installation
+
+Install my-project with npm
+
+"
+git clone https://github.com/your_username_/Project-Name.git
+  npm install my-project
+  cd my-project
+"
+    
+## Run Locally
+
+Clone the project
+
+"bash
+  git clone https://link-to-project
+"
+
+Go to the project directory
+"
+bash
+  cd my-project
+
+"
+Install dependencies
+"
+bash
+  npm install
+"
+
+Start the server
+"
+bash
+  npm run start
+"
+
+
+## Usage/Examples
+
+
+
+
+## Demo
+
+Insert gif or link to demo
+
+
+## Contributing
+
+Contributions are always welcome! as it  what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are 
+
+See  for ways to get started, If you have a suggestion that would make this better, please fork the repo and create a pull request
+
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+
+## Questions
+Email :
+Project Link:
+
+
+`
+
+
+await fs.writeFile("README.md", readMeText)
+
+console.log("success!")
