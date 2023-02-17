@@ -3,7 +3,7 @@ import fs from "fs/promises";
 
 
 // arrays of object that generate multiple question for user input
-let {title, description, installation, usage, contributing, license, link, test, username, email} = await inquirer
+let {title, description, installation, usage, contributing, licenses, link, test, username, email} = await inquirer
 .prompt([
     {
         type: 'input',
@@ -18,12 +18,17 @@ let {title, description, installation, usage, contributing, license, link, test,
      {
         type: 'input',
         name: 'installation',
-        message: "what are the steps involved when installing the your project?",
+        message: "Enter the repo link to the your project for installation?",
       },
       {
         type: 'input',
         name: 'usage',
         message: "what are the usage information of your project?",
+      },
+      {
+        type: 'input',
+        name: 'contributing',
+        message: "How can others contribute to your ptoject?",
       },
     
       {
@@ -40,12 +45,12 @@ let {title, description, installation, usage, contributing, license, link, test,
       },
     {
         type: 'list',
-        name: 'license',
+        name: 'licenses',
         message: 'What license does your application covered?',
         choices: ['Apache 2.0 ', 'The MIT License', 'Open Database License (ODbL)'],
-        filter(val) {
-          return val.toLowerCase();
-        },
+        // filter(val) {
+        //   return val.toLowerCase();
+        // },
       },
     {
         type: 'input',
@@ -55,7 +60,7 @@ let {title, description, installation, usage, contributing, license, link, test,
       {
         type: 'input',
         name: 'link',
-        message: "Enter your project link ?",
+        message: "Enter your project link?",
       },
       
       
@@ -83,53 +88,84 @@ function generateLicenese(license) {
     
 }
 
+// generating dynamic html element
 let readMeText =`
-#  ${title}
 
-# TABLE OF CONTENT
-  - [DESCRIPTION](#Description)
-  - [BULIT WITH](#Built-with)
-  - [INSTALLATION](#Installation)
-  - [RUN](#Run-Locally)
-  - [USAGE](#Usage/Examples)
-  - [DEMONSTRATION](#Demo)
-  - [CONTRIBUTING](#Contributing)
-  - [LICENSE](#License)
-  - [SUPPORT](#Support)
-  - [CONTRIBUTING](#Contributing)
-  - [FEEDBACK](#Feedback)
+<a name="readme-top"></a>
 
-# Description
+<!-- PROJECT TITLE -->
+
+<h3 align="center">${title}</h3>
+
+ 
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#project-description"> Project Description</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+         <li><a href="#installation">Installation</a></li>
+          <li><a href="#run-locally">Run Locally</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#question">Questions</a></li>
+    </ol>
+</details>
+
+
+
+<!-- DESCRIPTION OF THE PROJECT -->
+## Project Description
 ${description}
 
+### Built With
 
-## Built with
  * HTML
  * CSS
  * JAVASCRIPT
  * NODE.JS
- 
 
 
 
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Installation
-${installation}
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-Install my-project with npm
 
-"
-git clone https://github.com/your_username_/Project-Name.git
-  npm install my-project
-  cd my-project
-"
-    
+
+### Installation
+
+1. Clone the repo
+   'sh
+   git clone ${installation}
+   '
+2. Install NPM packages
+   'sh
+   npm install
+   '
+
+
+<!-- TEST -->
 ## Run Locally
 ${test}
 Clone the project
 
 "bash
-  git clone https://link-to-project
+  git clone ${link}
 "
 
 Go to the project directory
@@ -149,42 +185,40 @@ Start the server
 bash
   npm run start
 "
-
-
-## Usage/Examples
+<!-- USAGE EXAMPLES -->
+## Usage
 ${usage}
 
-
-
+<!-- DEMO ON HOW THE PROJECT WORKS -->
 ## Demo
 
 Insert gif or link to demo
 
 
+<!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are always welcome! as it  what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are 
+${contributing}
+1. Fork the Project
+2. Create your Feature Branch ('git checkout -b feature/redme_generator')
+3. Commit your Changes ('git commit -m 'Add some redme_generator'')
+4. Push to the Branch ('git push origin feature/redme_generator')
+5. Open a Pull Request
 
-See  for ways to get started, If you have a suggestion that would make this better, please fork the repo and create a pull request
- ${contributing}
-
-
-
+<!-- LICENSE -->
 ## License
-${(generateLicenese(license))}
-[MIT](https://choosealicense.com/licenses/mit/)
 
+Distrubed under the ${generateLicenese(licenses)}
 
-
+<!-- QUESTIONS -->
 ## Questions
+
 Email : ${email}
 Profile : ${username}
 Project Link: ${link}
-
-
 `
 
 
-await fs.writeFile("README.md", readMeText)
+await fs.writeFile("USERREADME.md", readMeText)
 
 console.log("success!")
