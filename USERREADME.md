@@ -37,7 +37,7 @@
 
 <!-- DESCRIPTION OF THE PROJECT -->
 ## Project Description
-"This project is basically design to display the readme.md file created by the user       
+"This project is basically design to display the readme.md file created by the user through the dynamic creation of element in JavaScript. The user is  except to provide answer to the corresponding question that is been propmt in the console. At the end of the question, a readme.md file is generate based on the user answer"
 
 ### Built With
 
@@ -57,10 +57,11 @@ To get a local copy up and running follow these simple example steps.
 
 
 ### Installation
+Follow the steps below to install this incridiable project:
 
 1. Clone the repo
    'sh
-   git clone through the dynamic creation in javascript. The user have to input the corresponding answer to the question that is  been  
+   git clone https://github.com/preshy59/readme_generator
    '
 2. Install NPM packages
    'sh
@@ -70,11 +71,11 @@ To get a local copy up and running follow these simple example steps.
 
 <!-- TEST -->
 ## Run Locally
-Aqgvbn ,mz
+"In order to test the project in your local machine, there is need to adapt to the instruction and steps listed below amicably"
 Clone the project
 
 "bash
-  git clone yaGFGVJ \BKLN
+  git clone https://github.com/preshy59/readme_generator
 "
 
 Go to the project directory
@@ -96,7 +97,7 @@ bash
 "
 <!-- USAGE EXAMPLES -->
 ## Usage
-prompt in the console through the means of node.js, based on the answer that the user provide in terms of the generated    
+"To be able to use the project the user have to type in answer to various information that is to be listed in the console when prompt. At the end of the question, the user can view the answer provided through the generated readme.md file"
 
 <!-- DEMO ON HOW THE PROJECT WORKS -->
 ## Demo
@@ -107,7 +108,7 @@ Insert gif or link to demo
 <!-- CONTRIBUTING -->
 ## Contributing
 
-question, a readme file is then generated."aqVBKNlk
+"Contribution are always welcome, as it what make the open source community such an amazing place to learn, create and inspire. if you wish to contribute find below the step that  are to be followed to get started"
 1. Fork the Project
 2. Create your Feature Branch ('git checkout -b feature/redme_generator')
 3. Commit your Changes ('git commit -m 'Add some redme_generator'')
@@ -117,11 +118,11 @@ question, a readme file is then generated."aqVBKNlk
 <!-- LICENSE -->
 ## License
 
-[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/)
+Distrubed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <!-- QUESTIONS -->
 ## Questions
 
-Email : faYKJ
-Profile : QAfhgjh;
-Project Link: yaGFGVJ \BKLN
+Email : okemba50@gmail.com
+Profile : https://github.com/preshy59
+Project Link: https://github.com/preshy59/readme_generator

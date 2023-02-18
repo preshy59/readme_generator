@@ -18,7 +18,7 @@ let {title, description, installation, usage, contributing, licenses, link, test
      {
         type: 'input',
         name: 'installation',
-        message: "Enter the repo link to the your project for installation?",
+        message: "what is need to install this your project?",
       },
       {
         type: 'input',
@@ -148,10 +148,11 @@ To get a local copy up and running follow these simple example steps.
 
 
 ### Installation
+${installation}
 
 1. Clone the repo
    'sh
-   git clone ${installation}
+   git clone ${link}
    '
 2. Install NPM packages
    'sh
