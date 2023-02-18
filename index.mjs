@@ -193,7 +193,7 @@ ${usage}
 <!-- DEMO ON HOW THE PROJECT WORKS -->
 ## Demo
 
-Insert gif or link to demo
+![Screenshot of the website](./assets/video/readme.mp4)
 
 
 <!-- CONTRIBUTING -->
