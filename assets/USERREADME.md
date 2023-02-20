@@ -102,7 +102,7 @@ bash
 <!-- DEMO ON HOW THE PROJECT WORKS -->
 ## Demo
 
-![Screenshot of the website](./assets/video/readme.mp4)
+[!Video description of the application](../assets/video/readme.mp4)
 
 
 <!-- CONTRIBUTING -->
