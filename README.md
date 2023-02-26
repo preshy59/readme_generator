@@ -61,7 +61,7 @@ To be able to use the project the user have to type in answer to various informa
 
 ## Demo
 
-[!Video description of the application](../assets/video/readme.mp4)
+[!Video description of the application](https://youtu.be/U4ctMPPrBO4)
 
 
 ## Contributing
