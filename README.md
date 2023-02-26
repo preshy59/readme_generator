@@ -2,7 +2,7 @@
 # README GENERATOR
 
 ## Project Description
-This project is basically design to display the readme.md file created by the user through the dynamic creation of element in JavaScript. The user is  except to provide answer to the corresponding question that is been propmt in the console. At the end of the question, a readme.md file is generate based on the user answer
+This project is basically design to display the readme.md file created by the user through the dynamic creation of element in JavaScript. ReadME.md file is important in every application as it enable the users to understand the functionality and usage of the application. In this application the user is except to provide answer to the corresponding question that is been propmt in the console. At the end of the question, a readme.md file is generate based on the user answer
 
 
 
